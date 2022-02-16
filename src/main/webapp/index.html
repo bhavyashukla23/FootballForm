@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="form border">
+        <!-- HEADING OF FORM -->
+        <h1>Football Registration Form</h1>
+        <div class="container-fluid">
+            <form id="form" novalidate>
+                <div class="row">
+
+                    <div class="col border">
+                        <div class="d-flex justify-content-between">
+                            <label for="username" class="form-label">USERNAME<span class="text-danger">*</span></label>
+                            <div class="retieveButton">
+                                <button class="submit" type="submit" id="retrievebutton" disabled>Retrieve</button>
+                            </div>
+                        </div>
+                        <input type="user_name" class="form-control" id="username" name="username"
+                            placeholder="Please enter your username of choice" required>
+                    </div>
+                    <div class=" col border">
+                        <label for="fname" class="form-label">FIRST NAME <span class="text-danger">*</span></label>
+                        <input type="f_name" class="form-control" id="fname" name="fname"
+                            placeholder="What is your first name?" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter valid first name!!
+                        </div>
+                    </div>
+                    <div class="col border">
+                        <label for="lname" class="form-label">LAST NAME</label>
+                        <input type="l_name" class="form-control" id="lname" name="lname"
+                            placeholder="What is your last name?">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter valid last name!!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col border">
+                            <label for="pno" class="form-label">PHONE NUMBER<span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <select class="form-select" id="country_code"></select>
+                                <input type="p_no" class="form-control" id="pno" name="phone" maxlength="10"
+                                    placeholder="What is the best # to reach you?" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Enter valid Phone number!!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col border">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-check-label" for="email">EMAIL<span
+                                        class="text-danger">*</span></label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="emailswitch" required>
+                                </div>
+                            </div>
+                            <input type="email" class="form-control" name="emails" id="email"
+                                placeholder="What is your e-mail address?" disabled>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Enter valid email!!
+                            </div>
+                        </div>
+                        <div class="col border">
+                            <label for="age" class="form-label">AGE GROUP<span class="text-danger">*</span></label>
+
+                            <select class="form-select text-secondary" id="age" name="age_group">
+                                <option value="" hidden disabled selected>What is your age group?</option>
+                                <option value="16-18 years">16-18 years</option>
+                                <option value="18-24 years">18-24 years</option>
+                                <option value="24-28 years">24-28 years</option>
+                                <option value="28-32 years">28-32 years</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Enter valid age!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col border">
+                            <p>DESIRED TEAM<span class="text-danger">*</span></p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="exampleRadios2" value="CHEALSEA"
+                                    name="teams">
+                                <label class="form-check-label p-0" for="exampleRadios2">CHEALSEA</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="exampleRadios21"
+                                    value="MANCHESTERUNITED" name="teams">
+                                <label class="form-check-label p-0" for="exampleRadios21">MANCHESTER UNITED</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="exampleRadios22" value="LIVERPOOL"
+                                    name="teams">
+                                <label class="form-check-label p-0" for="exampleRadios22">LIVERPOOL</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="exampleRadios23" value="BARCELONA"
+                                    name="teams">
+                                <label class="form-check-label p-0" for="exampleRadios23">BARCELONA</label>
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Enter valid team!!
+                            </div>
+                        </div>
+                        <div class="col border" id="position">
+                            <p>DESIRED POSITION<span class="text-danger">*</span></p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="GoalKeeper" id="defaultCheck1"
+                                    name="positions">
+                                <label class="form-check-label p-0" for="defaultCheck1">Goal Keeper</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Offensive" id="defaultCheck12"
+                                    name="positions">
+                                <label class="form-check-label p-0" for="defaultCheck1">Offensive</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Defense" id="defaultCheck13"
+                                    name="positions">
+                                <label class="form-check-label p-0" for="defaultCheck1">Defense</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Receiver" id="defaultCheck14"
+                                    name="positions">
+                                <label class="form-check-label p-0" for="defaultCheck1">Receiver</label>
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Enter valid position!!
+                            </div>
+                        </div>
+                        <div class="col border">
+                            <div class="mb-3">
+                                <label for="address" class="form-label">ADDRESS</label>
+                                <textarea class="form-control" id="address" name="address" rows="3"
+                                    placeholder="Enter your address"></textarea>
+                            </div>
+                        </div>
+                        <div class="col border">
+                            <div class="mb-3">
+                                <label for="pin" class="form-label">PIN CODE</label>
+                                <input type="email" class="form-control" name="pin_code" maxlength="6" id="pin"
+                                    placeholder="Enter your Pin code">
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Enter valid Pin code!!
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                            </div>
+                            <div class="col">
+                                <label for="inputCountry" class="form-label">COUNTRY<span
+                                        class="text-danger">*</span></label>
+                                <select id="inputCountry" name="country" class="form-select text-secondary">
+                                    <option value="" selected>Select the country</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Enter valid Country!!
+                                </div>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                            </div>
+                            <div class="col">
+                                <label for="inputState" class="form-label">STATE<span
+                                        class="text-danger">*</span></label>
+                                <select id="inputState" name="state" class="form-select text-secondary">
+                                    <option value="" selected>Select the state</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Enter valid State!!
+                                </div>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                            </div>
+                            <div class="col">
+                                <label for="inputCity" class="form-label">CITY<span class="text-danger">*</span></label>
+                                <select id="inputCity" name="city" class="form-select text-secondary">
+                                    <option value="" selected>Select a city..</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Enter valid City!!
+                                </div>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="submit" id="updateButton" disabled>Update</button>
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <div class="but">
+                    <button class="submit" type="submit" id="submitbutton" disabled>Phewww!Let's Submit it</button>
+                </div>
+            </form>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+            </script>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

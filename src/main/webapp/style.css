@@ -1,0 +1,72 @@
+* {
+  padding: 5px;
+  background-color: white;
+  color: grey;
+}
+.form {
+  background-color: lightblue;
+  border: 1px solid lightgrey;
+}
+
+/* THE HEADING FOOTBALL REGISTRATION FORM */
+.form h1 {
+  text-align: center;
+  background-color: lightblue;
+  color: grey;
+}
+.form .but {
+  text-align: center;
+  justify-content: center;
+}
+
+/* SUBMIT BUTTON */
+.but .submit {
+  background-color: rgb(14, 143, 223);
+  padding: 5px;
+  margin: 15px;
+  justify-content: 50px space-around;
+  color: white;
+  box-shadow: none;
+  border: none;
+}
+.but .submit:disabled {
+  background-color: lightblue;
+}
+
+.col .username:after {
+  content: "*";
+  color: red;
+}
+#country_code {
+  max-width: 88px;
+}
+
+/* UPDATE BUTTON */
+#updateButton {
+  background-color: rgb(14, 143, 223);
+  padding: 5px;
+  margin: 15px;
+  justify-content: 50px space-around;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  color: white;
+  box-shadow: none;
+  border: none;
+}
+#updateButton:disabled {
+  background-color: lightblue;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Retrieve BUTTON */
+#retrievebutton {
+  background-color: rgb(14, 143, 223);
+  color: white;
+  box-shadow: none;
+  border: none;
+}
+#retrievebutton:disabled {
+  background-color: lightblue;
+}
